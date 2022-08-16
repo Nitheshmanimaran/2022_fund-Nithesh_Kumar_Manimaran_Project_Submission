@@ -1,0 +1,486 @@
+@startuml
+participant Actor
+Actor -> Main : main
+activate Main
+Main -> MCQQuestionDAO : create
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> OpenQuestionDAO : create
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> MCQQuestionDAO : delete
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> OpenQuestionDAO : delete
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> MCQQuestionDAO : update
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> OpenQuestionDAO : update
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> MCQQuestionDAO : displayAll
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> OpenQuestionDAO : getAllOpenQuestions
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> MCQQuestionDAO : search
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> OpenQuestionDAO : search
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> MCQQuestionDAO : topicgiver
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> CreateQuiz : createMCQQuiz
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create MCQQuiz
+CreateQuiz -> MCQQuiz : new
+activate MCQQuiz
+MCQQuiz --> CreateQuiz
+deactivate MCQQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> OpenQuestionDAO : topicgiver
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> CreateQuiz : createOpenQuiz
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create OpenQuiz
+CreateQuiz -> OpenQuiz : new
+activate OpenQuiz
+create OpenQuestion
+OpenQuiz -> OpenQuestion : new
+activate OpenQuestion
+OpenQuestion --> OpenQuiz
+deactivate OpenQuestion
+OpenQuiz --> CreateQuiz
+deactivate OpenQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> MCQQuestionDAO : topicgiver
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> CreateQuiz : createMCQQuiz
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create MCQQuiz
+CreateQuiz -> MCQQuiz : new
+activate MCQQuiz
+MCQQuiz --> CreateQuiz
+deactivate MCQQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> OpenQuestionDAO : topicgiver
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> CreateQuiz : createOpenQuiz
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create OpenQuiz
+CreateQuiz -> OpenQuiz : new
+activate OpenQuiz
+create OpenQuestion
+OpenQuiz -> OpenQuestion : new
+activate OpenQuestion
+OpenQuestion --> OpenQuiz
+deactivate OpenQuestion
+OpenQuiz --> CreateQuiz
+deactivate OpenQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> StudentDAO : createStudent
+activate StudentDAO
+StudentDAO -> StudentDAO : connect
+activate StudentDAO
+StudentDAO -> StudentDAO : getdbProperties
+activate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> Main
+deactivate StudentDAO
+Main -> StudentDAO : readStudent
+activate StudentDAO
+StudentDAO -> StudentDAO : connect
+activate StudentDAO
+StudentDAO -> StudentDAO : getdbProperties
+activate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> Main
+deactivate StudentDAO
+Main -> StudentDAO : updateStudent
+activate StudentDAO
+StudentDAO -> StudentDAO : connect
+activate StudentDAO
+StudentDAO -> StudentDAO : getdbProperties
+activate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> Main
+deactivate StudentDAO
+Main -> StudentDAO : deleteStudent
+activate StudentDAO
+StudentDAO -> StudentDAO : connect
+activate StudentDAO
+StudentDAO -> StudentDAO : getdbProperties
+activate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> StudentDAO
+deactivate StudentDAO
+StudentDAO --> Main
+deactivate StudentDAO
+Main -> StudentLogin : login
+activate StudentLogin
+StudentLogin -> StudentLogin : connect
+activate StudentLogin
+StudentLogin -> StudentLogin : getdbProperties
+activate StudentLogin
+StudentLogin --> StudentLogin
+deactivate StudentLogin
+StudentLogin --> StudentLogin
+deactivate StudentLogin
+StudentLogin --> Main
+deactivate StudentLogin
+Main -> MCQQuestionDAO : topicgiver
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> CreateQuiz : createMCQQuiz
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create MCQQuiz
+CreateQuiz -> MCQQuiz : new
+activate MCQQuiz
+MCQQuiz --> CreateQuiz
+deactivate MCQQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> ExportStudentResult : extractMCQ
+activate ExportStudentResult
+ExportStudentResult --> Main
+deactivate ExportStudentResult
+Main -> OpenQuestionDAO : topicgiver
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> CreateQuiz : createOpenQuiz
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create OpenQuiz
+CreateQuiz -> OpenQuiz : new
+activate OpenQuiz
+create OpenQuestion
+OpenQuiz -> OpenQuestion : new
+activate OpenQuestion
+OpenQuestion --> OpenQuiz
+deactivate OpenQuestion
+OpenQuiz --> CreateQuiz
+deactivate OpenQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> ExportStudentResult : extractOpen
+activate ExportStudentResult
+ExportStudentResult --> Main
+deactivate ExportStudentResult
+Main -> MCQQuestionDAO : difficultygiver
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : connect
+activate MCQQuestionDAO
+MCQQuestionDAO -> MCQQuestionDAO : getdbProperties
+activate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> MCQQuestionDAO
+deactivate MCQQuestionDAO
+MCQQuestionDAO --> Main
+deactivate MCQQuestionDAO
+Main -> CreateQuiz : createMCQQuiz_difficult
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create MCQQuiz
+CreateQuiz -> MCQQuiz : new
+activate MCQQuiz
+MCQQuiz --> CreateQuiz
+deactivate MCQQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> ExportStudentResult : extractMCQD
+activate ExportStudentResult
+ExportStudentResult --> Main
+deactivate ExportStudentResult
+Main -> OpenQuestionDAO : difficultygiver
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : connect
+activate OpenQuestionDAO
+OpenQuestionDAO -> OpenQuestionDAO : getdbProperties
+activate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> OpenQuestionDAO
+deactivate OpenQuestionDAO
+OpenQuestionDAO --> Main
+deactivate OpenQuestionDAO
+Main -> CreateQuiz : createOpenQuiz_difficult
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : connect
+activate CreateQuiz
+CreateQuiz -> CreateQuiz : getdbProperties
+activate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+CreateQuiz --> CreateQuiz
+deactivate CreateQuiz
+create OpenQuiz
+CreateQuiz -> OpenQuiz : new
+activate OpenQuiz
+create OpenQuestion
+OpenQuiz -> OpenQuestion : new
+activate OpenQuestion
+OpenQuestion --> OpenQuiz
+deactivate OpenQuestion
+OpenQuiz --> CreateQuiz
+deactivate OpenQuiz
+CreateQuiz --> Main
+deactivate CreateQuiz
+Main -> ExportStudentResult : extractOpenD
+activate ExportStudentResult
+ExportStudentResult --> Main
+deactivate ExportStudentResult
+return
+@enduml
